@@ -32,7 +32,11 @@ _Add a new master component to average the total age for each species._
 
 _Show animals based on diet type. Then, show all animals who eat meat (carnivores AND omnivores)_
 
-### Ice Box
+### Potential future functionalities
+
+_Save details to the database_
+
+_Let management to delete animal details_
 
 _Enable user login (for caretakers and management)_
 
@@ -46,8 +50,8 @@ _Allow management to log each animals doctor visit, behavior on each day and vie
 
 * _In the command line, run:_
 ```
-git clone
-cd
+git clone https://github.com/Chitroopa/Seattle-Zoo
+cd Seattle-Zoo
 npm install
 bower install
 
@@ -68,9 +72,17 @@ No known bugs yet.
 
 ## Technologies Used
 
-_javaScript, typeScript, HTML, Saas, bootstrap_
+HTML
 
-_Frame Work - Angular 2, Node js_
+SCSS
+
+Bootstrap
+
+TypeScript
+
+Angular.js
+
+Node js
 
 ### License
 

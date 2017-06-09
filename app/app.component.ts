@@ -4,7 +4,7 @@ import { Zoo } from './zoo.model';
 @Component({
   selector: 'my-app',
   template: `
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-inverse">
     <div class="container">
       <div class="navbar-header">
         <div class="header-line"></div>
@@ -25,9 +25,12 @@ import { Zoo } from './zoo.model';
       </div>
     </div>
   </nav>
+
   <div class="container">
-    <h1>Seattle Zoo Tracker</h1>
-    <button class="btn bg-primary" (click)="addNewAnimalButtonClicked()">Add New Animal</button>
+    <div class="jumbotron">
+      <h1>Seattle Zoo Tracker</h1>
+    </div>
+    <button class="btn btn-primary" (click)="addNewAnimalButtonClicked()">Add New Animal</button>
     <new-animal [addNewAnimal]="addNewAnimal" (newAnimal)="newAnimal($event)"></new-animal>
     <list-animals [zooAnimalList]="zooAnimals" (editAnimalSender)="editAnimal($event)" ></list-animals>
     <edit-animal [animalToEdit]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></edit-animal>

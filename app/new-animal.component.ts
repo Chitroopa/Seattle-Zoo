@@ -5,74 +5,53 @@ import { Zoo } from './zoo.model';
   selector: 'new-animal',
   template: `
   <div class="container">
-    <div *ngIf="addNewAnimal">
+    <br><br>
+    <div class="well input-style" *ngIf="addNewAnimal">
       <h1>Add New animal!</h1>
-      <div class="row">
-        <div class="col-md-8">
-          <div class="form-group row">
-            <div class="col-md-3">
-              <label>Species</label>
-            </div>
-            <input #newSpecies>
-          </div>
-          <div class="form-group row">
-            <div class="col-md-3">
-              <label>Name</label>
-            </div>
-            <input #newName>
-          </div>
-          <div class="form-group row">
-            <div class="col-md-3">
-              <label>Age</label>
-            </div>
-            <input #newAge>
-          </div>
-          <div class="form-group row">
-            <div class="col-md-3">
-              <label>Diet</label>
-            </div>
-            <select #newDiet>
-              <option value="carnivorous">Carnivorous</option>
-              <option value="herbivorous">Herbivorous</option>
-              <option value="omnivorous">Omnivorous</option>
-            </select>
-          </div>
-          <div class="form-group row">
-            <div class="col-md-3">
-              <label>Location</label>
-            </div>
-            <input #newLocation>
-          </div>
-          <div class="form-group row">
-            <div class="col-md-3">
-              <label>Sex</label>
-            </div>
-            <select #newSex>
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-            </select>
-          </div>
-          <div class="form-group row">
-            <div class="col-md-3">
-              <label>Likes</label>
-            </div>
-            <input #newLikes>
-          </div>
-          <div class="form-group row">
-            <div class="col-md-3">
-              <label>Dislikes</label>
-            </div>
-            <input #newDislikes>
-          </div>
-          <div class="form-group row">
-            <div class="col-md-3">
-              <label>No. of Care Takers Needed</label>
-            </div>
-            <input #newCareTakersNeeded>
-          </div>
-          <button (click)="submitForm(newSpecies.value,newName.value,newAge.value,newDiet.value,newLocation.value,newSex.value,newLikes.value,newDislikes.value,newCareTakersNeeded.value); newSpecies.value='';newName.value='';newAge.value='';newLocation.value='';newLikes.value='';newDislikes.value='';newCareTakersNeeded.value='';" class="btn bg-primary">Save</button>
-        </div>
+      <div class="form-group">
+        <label>Species</label>
+        <input class="form-control" #newSpecies>
       </div>
+      <div class="form-group">
+        <label>Name</label>
+        <input class="form-control" #newName>
+      </div>
+      <div class="form-group">
+        <label>Age</label>
+        <input class="form-control" #newAge>
+      </div>
+      <div class="form-group">
+        <label>Diet</label><br>
+        <select #newDiet>
+          <option value="carnivorous">Carnivorous</option>
+          <option value="herbivorous">Herbivorous</option>
+          <option value="omnivorous">Omnivorous</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Location</label>
+        <input class="form-control" #newLocation>
+      </div>
+      <div class="form-group">
+        <label>Sex</label><br>
+        <select #newSex>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Likes</label>
+        <input class="form-control" #newLikes>
+      </div>
+      <div class="form-group">
+        <label>Dislikes</label>
+        <input class="form-control" #newDislikes>
+      </div>
+      <div class="form-group">
+        <label>No. of Care Takers Needed</label>
+        <input class="form-control" #newCareTakersNeeded>
+      </div>
+      <button (click)="submitForm(newSpecies.value,newName.value,newAge.value,newDiet.value,newLocation.value,newSex.value,newLikes.value,newDislikes.value,newCareTakersNeeded.value); newSpecies.value='';newName.value='';newAge.value='';newLocation.value='';newLikes.value='';newDislikes.value='';newCareTakersNeeded.value='';" class="btn bg-primary">Save</button>
     </div>
   </div>
   `

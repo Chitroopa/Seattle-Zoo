@@ -27,12 +27,18 @@ import { Zoo } from './zoo.model';
   </nav>
   <div class="container">
     <h1>Seattle Zoo Tracker</h1>
-    <new-animal (newAnimal)="newAnimal($event)"></new-animal>
+    <button class="btn bg-primary" (click)="addNewAnimalButtonClicked()">Add New Animal</button>
+    <new-animal [addNewAnimal]="addNewAnimal" (newAnimal)="newAnimal($event)"></new-animal>
+    <list-animals [zooAnimalList]="zooAnimals" (editAnimalSender)="editAnimal($event)" ></list-animals>
+    <edit-animal [animalToEdit]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></edit-animal>
   </div>
   `
 })
 
 export class AppComponent {
+
+  selectedAnimal = null;
+  addNewAnimal = null;
 
   zooAnimals: Zoo[] = [
     new Zoo('Arctic Fox', 'Moon', 2, 'carnivorous', 'Northern Trail', 'Female', 'Cool shade', 'Loud noises', 5),
@@ -42,7 +48,20 @@ export class AppComponent {
 
   newAnimal(newAnimalToAdd) {
     this.zooAnimals.push(newAnimalToAdd);
+    this.addNewAnimal = null;
     console.log(this.zooAnimals);
+  }
+
+  editAnimal(clickedAnimal) {
+    this.selectedAnimal = clickedAnimal;
+  }
+
+  finishedEditing() {
+    this.selectedAnimal = null;
+  }
+
+  addNewAnimalButtonClicked() {
+    this.addNewAnimal = "true";
   }
 
 }

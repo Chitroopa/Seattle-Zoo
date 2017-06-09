@@ -5,7 +5,7 @@ import { Zoo } from './zoo.model';
   selector: 'edit-animal',
   template: `
   <div class="container">
-    <div *ngIf='animalToEdit'>
+    <div *ngIf='animalToEdit' class="well">
       <h1>Edit deatils of {{animalToEdit.name}}</h1>
       <div class="form-group row">
         <div class="col-md-3">

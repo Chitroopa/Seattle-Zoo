@@ -40,8 +40,8 @@ import { Zoo } from './zoo.model';
 
 export class AppComponent {
 
-  selectedAnimal = null;
-  addNewAnimal = null;
+  selectedAnimal: Zoo[] = null;
+  addNewAnimal: Zoo[]  = null;
 
   zooAnimals: Zoo[] = [
     new Zoo('Arctic Fox', 'Moon', 2, 'carnivorous', 'Northern Trail', 'Female', 'Cool shade', 'Loud noises', 5),
